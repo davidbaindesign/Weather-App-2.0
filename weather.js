@@ -77,6 +77,10 @@ function update() {
       //fast forward a day 86400 seconds
       epoch = epoch + 86400;
     }
+   else if (epoch > sunset1) {
+      //previous day, rewind a day
+      epoch = epoch - 86400;
+    }
     
     //weather icon
     switch (obj.weather[0].icon) {
